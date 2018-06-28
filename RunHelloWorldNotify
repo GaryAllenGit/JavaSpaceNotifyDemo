@@ -1,0 +1,1 @@
+java -Djava.security.policy=/local/public/chs2546/policy.all HelloWorldNotify
