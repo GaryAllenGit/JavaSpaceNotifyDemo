@@ -32,9 +32,13 @@ and run the simple version with:
 
 	java HelloWorldSpace
 
-or the 'notify' version with:
+Then run the 'notify' version with:
 
-    java HelloWorldNotify
+    java -Djava.security.policy=/local/public/chs2546/policy.all HelloWorldNotify
+
+OR by running the above command as a script:
+
+    RunHelloWorldNotify
 
 Look at the code, which has extensive comments, to see what is happening.
 
