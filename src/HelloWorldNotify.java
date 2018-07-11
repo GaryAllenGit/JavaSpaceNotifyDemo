@@ -7,8 +7,6 @@ import net.jini.jeri.BasicILFactory;
 import net.jini.jeri.BasicJeriExporter;
 import net.jini.jeri.tcp.TcpServerEndpoint;
 
-import java.rmi.RMISecurityManager;
-
 public class HelloWorldNotify implements RemoteEventListener {
 
 	private JavaSpace space;
@@ -69,7 +67,7 @@ public class HelloWorldNotify implements RemoteEventListener {
 	public static void main(String[] args) {
 		// set up the security manager
 		if (System.getSecurityManager() == null)
-			System.setSecurityManager(new RMISecurityManager());
+			System.setSecurityManager(new SecurityManager());
 
 		// run the object
 		new HelloWorldNotify();

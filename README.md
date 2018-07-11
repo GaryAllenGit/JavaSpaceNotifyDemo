@@ -2,6 +2,8 @@ This is a demo of the JavaSpace 'notify' functionality.
 
 Written by Dr Gary Allen, University of Huddersfield.
 
+Updated to Apache River 3.0
+
 
 There are two versions of a JavaSpace 'hello world' program:
 
@@ -12,7 +14,7 @@ The second (HelloWorldNotify) adds a listener to the space, then writes an objec
 As usual, if using an IDE like IntelliJ or eclipse you need to create a java project with the correct classes added as libraries, then paste the code in and run it.
 You also need to create a Run Configuration and pass the correct VM arguments in order to get the 'notify' version of the code to run.  Add this:
 
-    -Djava.security.policy=/local/public/chs2546/policy.all
+    -Djava.rmi.server.useCodebaseOnly=false  -Djava.security.policy=policy.all
 
 to the VM args of the Run Configuration.
 
@@ -34,7 +36,7 @@ and run the simple version with:
 
 Then run the 'notify' version with:
 
-    java -Djava.security.policy=/local/public/chs2546/policy.all HelloWorldNotify
+    java -Djava.rmi.server.useCodebaseOnly=false  -Djava.security.policy=policy.all HelloWorldNotify
 
 OR by running the above command as a script:
 
